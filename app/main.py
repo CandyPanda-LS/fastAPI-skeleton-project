@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from .routers import blog
+from .routers import BlogRouter
 import uvicorn  
 app = FastAPI()
 
-app.include_router(blog.router)
+app.include_router(BlogRouter)
 
 @app.get('/')
 def index():
