@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from ..services import blog
+from ..services import get_all
 router = APIRouter(
     prefix="/blog",
     tags=['Blogs']
@@ -7,4 +7,5 @@ router = APIRouter(
 
 @router.get('/')
 def all():
-    return blog.get_all()
+    return get_all()
+    
